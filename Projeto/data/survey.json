@@ -1,0 +1,53 @@
+{
+  "title": "Pesquisa de Bem-Estar dos Profissionais da Educação",
+  "schools": [
+    { "value": "cei_lkm", "text": "Centro de Educação Infantil - Luan Kaiber Miranda" },
+    { "value": "em_epc",  "text": "Escola Municipal Professor Eduardo Pereira Calado" }
+  ],
+  "perfil": [
+    { "type": "radiogroup", "name": "funcao", "title": "Função na rede", "required": true,
+      "choices": ["Docente","Auxiliar/Assistente de professor","Função técnica/administrativa escolar"] },
+    { "type": "checkbox", "name": "escolas_atuacao", "title": "Em quais escolas você atua?", "required": true,
+      "choicesFrom": "schools", "columns": 2 }
+  ],
+  "questions": [
+    {
+      "type": "matrixBySchool",
+      "name": "A1_colegas",
+      "title": "Clima — Relação com colegas",
+      "required": true,
+      "choices": [
+        { "value": 1, "text": "Muito ruim" },
+        { "value": 2, "text": "Ruim" },
+        { "value": 3, "text": "Bom" },
+        { "value": 4, "text": "Muito bom" },
+        { "value": "NS", "text": "NS/NA" }
+      ]
+    },
+    {
+      "type": "matrixBySchool",
+      "name": "E1_materiais",
+      "title": "Recursos (Docentes) — Materiais didáticos",
+      "docenteOnly": true,
+      "choices": [
+        { "value": 1, "text": "Muito ruim" },
+        { "value": 2, "text": "Ruim" },
+        { "value": 3, "text": "Bom" },
+        { "value": 4, "text": "Muito bom" },
+        { "value": "NS", "text": "NS/NA" }
+      ]
+    },
+    {
+      "type": "radiogroup",
+      "name": "gp_satisfRemun",
+      "title": "Satisfação com a remuneração",
+      "choices": [
+        { "value": 1, "text": "Muito insatisfeito(a)" },
+        { "value": 2, "text": "Insatisfeito(a)" },
+        { "value": 3, "text": "Satisfeito(a)" },
+        { "value": 4, "text": "Muito satisfeito(a)" },
+        { "value": "NS", "text": "NS/NA" }
+      ]
+    }
+  ]
+}
